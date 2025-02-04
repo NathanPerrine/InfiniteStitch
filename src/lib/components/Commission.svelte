@@ -84,11 +84,12 @@
 	}
 
 	.step-number {
-		width: 48px;
+		min-width: 48px;
 		height: 48px;
-		background: linear-gradient(to bottom right, color-mix(in srgb, var(--primary) 10%, transparent), color-mix(in srgb, var(--accent) 10%, transparent));
-		color: var(--primary);
+		background: linear-gradient(to bottom right, color-mix(in srgb, var(--primary) 20%, transparent), color-mix(in srgb, var(--accent) 20%, transparent));
+		color: var(--accent);
 		border-radius: 50%;
+    border: 1px solid var(--primary);
 		display: flex;
 		align-items: center;
 		justify-content: center;

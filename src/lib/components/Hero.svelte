@@ -6,7 +6,7 @@
 	<div class="hero-content">
 		<img src="/assets/IS-Logo.webp" alt="Infinite Stitchings Logo" class="hero-logo" />
 		<h1 class="hero-title">
-			Handcrafted with Love <span class="hero-icon"><HeartIcon /></span>
+			Handcrafted with Love <span class="hero-icon"><HeartIcon size={36} /></span>
 		</h1>
 		<p class="hero-description">Custom crochet creations that bring warmth and joy to your life</p>
 		<div class="hero-buttons">

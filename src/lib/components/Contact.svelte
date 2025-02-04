@@ -5,9 +5,29 @@
 	let email: string = $state("");
 	let message: string = $state("");
 
-	const handleSubmit = (e: Event) => {
+	const handleSubmit = async (e: Event) => {
 		e.preventDefault();
 		console.log({ name, email, message });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (response.ok) {
+        alert('Your message has been sent successfully!');
+        name = '';
+        email = '';
+        message = '';
+      } else {
+        alert('An error occurred while sending your message. Please try again later.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('An error occurred while sending your message. Please try again later.');
+    }
 	};
 </script>
 
