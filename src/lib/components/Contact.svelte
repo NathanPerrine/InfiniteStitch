@@ -7,7 +7,6 @@
 
 	const handleSubmit = async (e: Event) => {
 		e.preventDefault();
-		console.log({ name, email, message });
 
     try {
       const response = await fetch('/api/contact', {
