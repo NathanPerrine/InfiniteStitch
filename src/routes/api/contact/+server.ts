@@ -13,8 +13,8 @@ export async function POST({ request }) {
     }
 
     const { data, error: resendError } = await resend.emails.send({
-      // from: 'Infinite Stitchings <FoxHollow.web@gmail.com>',
-      from: 'onboarding@resend.dev',
+      // Works for now, would need to purchase a domain to use the above line to use custom domain / email.
+      from: 'Infinite Stitchings <onboarding@resend.dev>',
       to: 'foxhollow.web@gmail.com',
       subject: `New Commission Request from ${name}`,
       html: `
