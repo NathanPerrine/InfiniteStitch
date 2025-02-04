@@ -1,12 +1,11 @@
 <script lang="ts">
 	import Navbar from '$lib/components/Navbar.svelte';
-	import Hero from "$lib/components/Hero.svelte";
-	import Gallery from "$lib/components/Gallery.svelte";
-	import Commission from "$lib/components/Commission.svelte";
-	import Contact from "$lib/components/Contact.svelte";
-	import Footer from "$lib/components/Footer.svelte";
+	import Hero from '$lib/components/Hero.svelte';
+	import Gallery from '$lib/components/Gallery.svelte';
+	import Commission from '$lib/components/Commission.svelte';
+	import Contact from '$lib/components/Contact.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
-	// Track if mobile menu is open
 	let isMenuOpen: boolean = $state(false);
 </script>
 
@@ -39,17 +38,17 @@
 </div>
 
 <style lang="scss">
-  :global(html) {
-    scroll-behavior: smooth;
-  }
+	:global(html) {
+		scroll-behavior: smooth;
+	}
 
 	:global(body) {
 		--primary: #2dd4ec;
 		--primary-hover: #25b8cc;
-		--accent: #9747ff;
-		--accent-hover: #8035e0;
+		--accent: #ff69b4;
+		--accent-hover: #ff1493;
 
-    margin: 0;
+		margin: 0;
 	}
 
 	.page-container {
