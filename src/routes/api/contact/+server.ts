@@ -6,6 +6,7 @@ export async function POST({ request }) {
   const resend = new Resend(SECRET_RESEND_API_KEY);
 
   try {
+    console.log('API Key available: ', !!SECRET_RESEND_API_KEY);
     const { name, email, message } = await request.json();
 
     if (!name || !email || !message) {
