@@ -6,7 +6,6 @@ export async function POST({ request }) {
   const resend = new Resend(SECRET_RESEND_API_KEY);
 
   try {
-    console.log('API Key available: ', !!SECRET_RESEND_API_KEY);
     const { name, email, message } = await request.json();
 
     if (!name || !email || !message) {
@@ -14,7 +13,8 @@ export async function POST({ request }) {
     }
 
     const { data, error: resendError } = await resend.emails.send({
-      from: 'Infinite Stitchings <FoxHollow.web@gmail.com>',
+      // from: 'Infinite Stitchings <FoxHollow.web@gmail.com>',
+      from: 'onboarding@resend.dev',
       to: 'foxhollow.web@gmail.com',
       subject: `New Commission Request from ${name}`,
       html: `
